@@ -3,7 +3,7 @@ import streamlit as st
 from pathlib import Path
 from modules.photovideo import PhotoVideoProcessor
 from modules.webcam import WebcamDetector
-from modules.screencapture import ScreenMonitor
+#from modules.screencapture import ScreenMonitor
 from modules.telegram import TelegramConfig
 from modules.logger import logger
 
