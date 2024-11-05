@@ -75,7 +75,7 @@ A Streamlit application for real-time detection of fire and smoke using YOLO mod
    https://share.streamlit.io/lightremedy/ict304/main/run.py
    ```
 
-3 **The application will be hosted on streamlit community cloud.**
+3. **The application will be hosted on streamlit community cloud.**
 
 4. **You can test the application by uploading a photo/video, selecting the webcam option, or selecting the screen monitoring option.**
 
