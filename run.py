@@ -21,7 +21,7 @@ telegram.configure_sidebar()
 # Sidebar: Choose detection mode
 mode = st.sidebar.selectbox(
     "Choose a Detection Mode:",
-    ["Upload Photo/Video", "Webcam Realtime Detection", "Screen Monitoring"]
+    ["Upload Photo/Video", "Webcam Realtime Detection"]#, "Screen Monitoring"]
 )
 
 # Get Base Directory
@@ -34,8 +34,8 @@ if mode == "Upload Photo/Video":
 elif mode == "Webcam Realtime Detection":
     detector = WebcamDetector(BASE_DIR)
     detector.start_detection()
-elif mode == "Screen Monitoring":
-    monitor = ScreenMonitor(BASE_DIR)
-    monitor.start_monitoring()
+# elif mode == "Screen Monitoring":
+#     monitor = ScreenMonitor(BASE_DIR)
+#     monitor.start_monitoring()
 
 logger.info("Application ended.")

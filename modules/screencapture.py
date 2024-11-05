@@ -1,21 +1,13 @@
 # modules/screencapture.py
 import cv2
 import numpy as np
+import pyautogui
 import streamlit as st
 import time
 from pathlib import Path
 from .model import load_model, class_names
 from .telegram import TelegramConfig
 from .logger import logger
-
-# Check if running in a headless environment
-HEADLESS_ENV = "DISPLAY" not in os.environ
-
-# Only import pyautogui if not in a headless environment
-if not HEADLESS_ENV:
-    import pyautogui
-else:
-    st.warning("Screen capturing is disabled in this environment.")
 
 class ScreenMonitor:
     def __init__(self, base_dir: Path):
@@ -31,11 +23,6 @@ class ScreenMonitor:
         logger.info("Screen monitoring started.")
 
         while monitoring:
-            if HEADLESS_ENV:
-                st.warning("Screen monitoring is not supported in headless mode.")
-                logger.warning("Attempted to monitor in headless mode. Exiting.")
-                break
-
             # Capture the screen
             screenshot = pyautogui.screenshot()
             frame = np.array(screenshot)
