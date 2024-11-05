@@ -7,6 +7,6 @@ numpy==1.26.4
 pyautogui==0.9.54
 python-dotenv==1.0.1
 requests==2.32.3
-watchdog==6.0.0
+watchdog==5.2.0
 
 
