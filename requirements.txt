@@ -2,7 +2,7 @@ ipykernel==6.29.5
 setuptools==75.2.0
 streamlit==1.39.0
 ultralytics==8.3.19
-opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
 numpy==2.1.2
 pyautogui==0.9.54
 requests==2.32.3
