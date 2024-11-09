@@ -9,10 +9,11 @@ from modules.logger import logger
 logger.info("Application started.")
 
 # Get Base Directory (the directory where this script is located)
-BASE_DIRECTORY = Path.home() / 'HomeShield'
+BASE_DIRECTORY = Path(__file__).resolve().parent
 
 # Define the path to the company logo image
 logo_file_path = BASE_DIRECTORY / "assets" / "icon.png"
+
 # Display the company logo in the Streamlit sidebar
 st.sidebar.image(str(logo_file_path), width=150)  # Adjust the width as needed
 
